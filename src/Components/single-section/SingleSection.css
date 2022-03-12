@@ -9,10 +9,22 @@
 
 .sub-item {
     margin: 1em 0.5em;
+    /* font-size: 70px; */
 }
 
 .section-container {
     border: 10px solid cyan;
-    margin: 1em 1em;
-    padding: 1em 1em;
+    margin: 2em 2em;
+    /* padding: 1em 1em; */
+
+    height: 100%;
+}
+video{
+    width: 100%;
+    opacity: 0.7;
+    background-color: black;
+}
+.frontOfVideo{
+   
+
 }

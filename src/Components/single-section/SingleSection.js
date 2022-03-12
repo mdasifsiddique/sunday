@@ -1,10 +1,12 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import { useState } from 'react';
 
 import './SingleSection.css'
 
 
-const SingleSection = ({item}) => {
-  const {id,title,subtitle,video,items} = item
+
+const SingleSection = ({ item }) => {
+  const { id, title, subtitle, items } = item
   const playVideo = (e) => {
     // e.target.play()
     console.log(e.target);
@@ -12,20 +14,27 @@ const SingleSection = ({item}) => {
   }
   const pauseVideo = (e) => {
     // e.target.stop()
-    console.log(e.target);
-    console.log("Off");
+    // console.log(e.target);
+    // console.log("Off");
   }
+
+
+
   return (
-    <div className='section-container' onMouseOver={playVideo} onMouseOut={pauseVideo}>
-      <h1>{title}</h1>
-      <p>{subtitle}</p>
-      <video autoPlay muted loop onMouseOver={playVideo}>
-        <source src={video} type="video/mp4"/>
-      </video>
-      <div className='sub-items'>
-      {
-        items.map((e,i)=> <div className='sub-item' key={i}>{e}</div>)
-      }
+    <div className='section-container' onMouseEnter={playVideo} >
+      {/* <video controls autoPlay width="100%" height="100%">
+        <source src = {require(`${item.video}`)} type='video/mp4' ></source>
+  
+      </video> */}
+
+      <div className='frontOfVideo'>
+        <h1>{title}</h1>
+        <p>{subtitle}</p>
+        <div className='sub-items'>
+          {
+            items.map((e, i) => <div className='sub-item' key={i}>{e}</div>)
+          }
+        </div>
       </div>
     </div>
   )

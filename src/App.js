@@ -1,5 +1,5 @@
 import React from 'react'
-import Section from './Components/Sections/Section'
+import Section from './Components/sections/Section.js'
 // import Video from './Components/Video'
 import data from './data/data.json'
 
